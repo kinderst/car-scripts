@@ -52,7 +52,7 @@ while True:
 
 	print(serial_bytes)
 
-	echo_string = 'sudo echo -n -e \'' + serial_bytes[0] +  '\\' + serial_bytes[1] + '\\' + serial_bytes[2] + '\\' + serial_bytes[3] + '\' > /dev/ttyACM0'
+	echo_string = r'sudo echo -n -e \'' + serial_bytes[0] +  '\\' + serial_bytes[1] + '\\' + serial_bytes[2] + '\\' + serial_bytes[3] + '\' > /dev/ttyACM0'
 	print(echo_string)
 	os.system(echo_string)
 	
