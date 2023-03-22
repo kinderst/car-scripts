@@ -13,7 +13,8 @@ time.sleep(2)
 print("initializing, setting to 1500 x70 x2e")
 # write 
 # cmd = r'sudo echo -n -e "\x84\x01\x70\x2e" > /dev/ttyACM0'
-cmd = r'sudo echo -n -e "\x84\x01\x70\x2e" > /dev/ttyACM0'
+#cmd = r'sudo echo -n -e "\x84\x01\x70\x2e" > /dev/ttyACM0'
+cmd = r'sudo echo -n -e "\x84\x01\x58\x36" > /dev/ttyACM0'
 print(cmd)
 # cmd = r'echo -n -e "\x84\x01\x70\x2e" > hello.txt'
 os.system(cmd)
