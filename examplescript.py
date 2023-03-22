@@ -12,7 +12,9 @@ print("starting in 2 sec")
 time.sleep(2)
 print("initializing, setting to 1500 x70 x2e")
 # write 
+# cmd = r'sudo echo -n -e "\x84\x01\x70\x2e" > /dev/ttyACM0'
 cmd = r'sudo echo -n -e "\x84\x01\x70\x2e" > /dev/ttyACM0'
+print(cmd)
 # cmd = r'echo -n -e "\x84\x01\x70\x2e" > hello.txt'
 os.system(cmd)
 # sleep one second
@@ -29,6 +31,7 @@ while True:
 	channel = input()
 	channel = int(channel)
 	channel_hex = hex(channel)[1:]
+	channel_hex = 'x01'
 	serial_bytes.append(channel_hex)
 
 	print("enter target (times 4 for quarter ms): ")
@@ -48,7 +51,7 @@ while True:
 
 	print(serial_bytes)
 
-	echo_string = 'sudo echo -n -e "' + serial_bytes[0] +  '\\' + serial_bytes[1] + '\\' + serial_bytes[2] + '\\' + serial_bytes[3] + '" > /dev/ttyACM0'
+	echo_string = 'sudo echo -n -e \'' + serial_bytes[0] +  '\\' + serial_bytes[1] + '\\' + serial_bytes[2] + '\\' + serial_bytes[3] + '\' > /dev/ttyACM0'
 	print(echo_string)
 	os.system(echo_string)
 	
