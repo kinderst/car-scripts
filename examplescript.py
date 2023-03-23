@@ -98,7 +98,7 @@ if cont_string == 'y':
 	time.sleep(1)
 
 	# go:
-	updated_accel = calibrated_accel_val + 200
+	updated_accel = calibrated_accel_val + 800
 	# create serial bytes
 	serial_bytes = []
 	# command byte, maestro
@@ -120,7 +120,7 @@ if cont_string == 'y':
 	print(echo_string)
 	os.system(echo_string)
 	print("sleeping 1 second:")
-	time.sleep(1)
+	time.sleep(3)
 	print("stopping:")
 	# create serial bytes
 	serial_bytes = []
