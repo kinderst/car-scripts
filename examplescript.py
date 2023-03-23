@@ -98,7 +98,7 @@ if cont_string == 'y':
 	time.sleep(1)
 
 	# go:
-	updated_accel = calibrated_accel_val + 800
+	updated_accel = calibrated_accel_val + 400
 	# create serial bytes
 	serial_bytes = []
 	# command byte, maestro
@@ -119,8 +119,8 @@ if cont_string == 'y':
 	echo_string = r'sudo echo -n -e "\\' + serial_bytes[0] + r'\\' + serial_bytes[1] + r'\\' + serial_bytes[2] + r'\\' + serial_bytes[3] + r'" > /dev/ttyACM0'
 	print(echo_string)
 	os.system(echo_string)
-	print("sleeping 1 second:")
-	time.sleep(3)
+	print("sleeping running 2 second:")
+	time.sleep(2)
 	print("stopping:")
 	# create serial bytes
 	serial_bytes = []
