@@ -10,8 +10,8 @@ GPIO.setup(sensor,GPIO.IN)
 GPIO.setup(buzzer,GPIO.OUT)
 
 GPIO.output(buzzer,False)
-print "IR Sensor Ready....."
-print " "
+print("IR Sensor Ready.....")
+print(" ")
 
 try: 
    while True:
