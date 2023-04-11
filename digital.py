@@ -2,8 +2,15 @@ import time
 import board
 import digitalio
 
+import inspect
+
+print("wtf")
+print(inspect.getmembers(board))
+print("ok")
+print(dir(board))
+
 # Set up digital input pin
-digital_in = digitalio.DigitalInOut(board.XU4_GPIO.B2)
+digital_in = digitalio.DigitalInOut(board.XU4_GPIO.B.2)
 digital_in.direction = digitalio.Direction.INPUT
 
 # Loop forever, reading and printing the digital input value
