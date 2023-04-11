@@ -10,7 +10,7 @@ import inspect
 # print(dir(board))
 
 # Set up digital input pin
-digital_in = digitalio.DigitalInOut(board.D16)
+digital_in = digitalio.DigitalInOut(board.D18)
 digital_in.direction = digitalio.Direction.INPUT
 
 # Loop forever, reading and printing the digital input value
