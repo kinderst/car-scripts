@@ -3,7 +3,7 @@ import board
 import digitalio
 
 # Set up digital input pin
-digital_in = digitalio.DigitalInOut(board.GP16)
+digital_in = digitalio.DigitalInOut(board.GPIO16)
 digital_in.direction = digitalio.Direction.INPUT
 
 # Loop forever, reading and printing the digital input value
