@@ -4,7 +4,7 @@ import time
 serial = wpi.serialOpen('/dev/ttyS0', 115200)
  
 while True:
-        input_str = raw_input('Serial Input> ')
+        input_str = 'Serial Input> '
         wpi.serialPuts(serial, input_str)
         time.sleep(0.1)
  
