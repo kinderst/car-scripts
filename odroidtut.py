@@ -11,6 +11,6 @@ while True:
         output_str = 'Serial Output> '
         while wpi.serialDataAvail(serial):
                 output_str += chr(wpi.serialGetchar(serial))
-        print output_str
+        print(output_str)
  
 wpi.serialClose(serial)
